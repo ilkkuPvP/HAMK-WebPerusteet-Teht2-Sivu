@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+#nav_bar {
+    display: flex;
+    background-color: #BB3D40;
+    
+}
+
+#nav_bar ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_bar a{
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav_bar a:hover{
+    background-color: #9c3435;
+}
+
+#nav_bar p{
+    display: block;
+    color:white;
+    padding: 0 12px
+    
+}

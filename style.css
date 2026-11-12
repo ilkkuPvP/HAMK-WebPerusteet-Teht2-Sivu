@@ -1,7 +1,35 @@
-* {
+*{
     box-sizing: border-box;
+    color: white;
 }
-#nav_bar {
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    background-color: #303030;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+#logo img{
+    width: 48px;
+    margin-right: 10px;
+}
+
+#logo a{
+    font-family: "Josefin Sans";
+    /* color: white; */
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#nav_bar{
     display: flex;
     background-color: #BB3D40;
     
@@ -14,20 +42,131 @@
     padding: 0;
 }
 
-#nav_bar a{
+#nav_bar li a{
     display: block;
-    color: white;
-    padding: 14px 16px;
+    object-fit: fill;
+    /* color: white; */
+    /* font-size: 1em; */
+    padding: 16px 16px;
     text-decoration: none;
 }
 
-#nav_bar a:hover{
+#nav_bar li a:hover{
     background-color: #9c3435;
 }
 
-#nav_bar p{
-    display: block;
-    color:white;
-    padding: 0 12px
-    
+/*  */
+/* Hero */
+
+.hero-section{
+    background-color: white;
+    padding: 360px 0;/*temp, def.60px*/
+    clip-path: polygon(15% 0%, 85% 0%, 70% 100%, 30% 100%);
 }
+
+/*  */
+/* Content */
+
+.tietoja-section{
+    background-color: #3C3C3C;
+    padding: 60px 0;
+
+    clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+}
+
+#tietoja-katkoviiva{
+    position: absolute;
+    top: 0;
+    bottom: 100%;
+    left: 50%;
+    height: 100%;
+    border-left: 20px dashed #888888;
+}
+
+.tietoja-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    gap: 50px;
+}
+
+#tietoja-1, #tietoja-2, #tietoja-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+#tietoja-1 img, #tietoja-2 img, #tietoja-3 img {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+}
+
+#tietoja-1 img {
+    border-radius: 40px;
+}
+#tietoja-2 img {
+    border-radius: 60px;
+}
+#tietoja-3 img {
+    border-radius: 80px;
+}
+
+#tietoja-1 p, #tietoja-2 p, #tietoja-3 p {
+    width: 45%;
+    margin: 0;
+}
+
+#tietoja-1 {
+    max-width: 40%; 
+    font-size: 1.5em; 
+}
+
+#tietoja-2 {
+    max-width: 54%; 
+    font-size: 1.75em;
+}
+
+#tietoja-3 {
+    max-width: 72%; 
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+/* Media Query */
+@media (max-width:1700px) {
+    .hero-section{
+        clip-path: polygon(5% 0%, 95% 0%, 80% 100%, 20% 100%);
+    }
+    .tietoja-section{
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+    #tietoja-1 {
+        max-width: 59%; 
+        font-size: 1.5em; 
+    }
+    #tietoja-2 {
+        max-width: 70%; 
+        font-size: 1.75em;
+    }
+    #tietoja-3 {
+        max-width: 82%; 
+        font-size: 2em;
+    }
+}
+
+
+
+

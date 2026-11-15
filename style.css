@@ -84,6 +84,25 @@ body{
 .hero-container{
     width: 70%;
     height: 100%;
+    position: relative;
+}
+
+.hero-texts{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 20%; */
+    text-shadow: 0 2px 8px black, 0 2px 16px black;
+    font-size: 1.2em;
+    /* backdrop-filter: Blur(2px); */ /* Hero taustablur, oli kai parempi ilman*/
 }
 
 .hero-imgs{

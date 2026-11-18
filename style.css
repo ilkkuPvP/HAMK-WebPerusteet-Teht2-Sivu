@@ -21,7 +21,7 @@ body{
     justify-content: center;
     width: 100%;
     background-color: #BB3D40;
-    z-index: 1000;
+    z-index: 1010;
 
 }
 
@@ -166,6 +166,18 @@ body{
 }
 
 
+/* Sticky väliotsikot */
+.sticky-otsikko {
+    font-family: "Josefin Sans";
+    /* font-size: 2rem; */
+    position: sticky;
+    top: 60px;
+    background-color: #BB3D40;
+    padding: 6px 10px;
+    padding-top: 10px; /* Fontti on oudosti keskitetty, ni joutu tehä tälläsen kikan */
+    border-radius: 15px;
+    margin: 0;
+}
 
 /* -- TIETOJA -- */ 
 
@@ -181,7 +193,6 @@ body{
 #tietoja-katkoviiva{
     position: absolute;
     top: 0;
-    bottom: 100%;
     left: 50%;
     transform: translateX(-50%); 
     height: 100%;
@@ -195,17 +206,7 @@ body{
     gap: 60px;
 }
 
-.tietoja-container h1{
-    font-family: "Josefin Sans";
-    font-size: 2rem;
-    position: sticky;
-    top: 60px;
-    background-color: #BB3D40;
-    padding: 8px 12px;
-    padding-top: 12px; /* Fontti on oudosti keskitetty, ni joutu tehä tälläsen kikan */
-    border-radius: 15px;
-    margin: 0;
-
+.tietoja-container h2{
     z-index: 1001;
 }
 
@@ -272,18 +273,8 @@ body{
     width: 100%;
 }
 
-.galleria-container h1{
-    font-family: "Josefin Sans";
-    font-size: 2rem;
-    position: sticky;
-    top: 60px;
-    background-color: #BB3D40;
-    padding: 8px 12px;
-    padding-top: 12px; /* Fontti on oudosti keskitetty, ni joutu tehä tälläsen kikan */
-    border-radius: 15px;
-    margin: 0;
+.galleria-container h2{
     margin-bottom: 15px;
-
     z-index: 1002;
 }
 
@@ -387,9 +378,8 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around; /* space-between, jos padding kikka */
+    justify-content: space-around;
     gap: 60px;
-    /* padding: 0 510px; */
     width: 100%;
 }
 
@@ -409,6 +399,7 @@ body{
 
 /* -- MEDIA QUERY -- */
 
+/* 1600px */
 @media (max-width:1600px) {
 
     .hero-section{
@@ -431,7 +422,7 @@ body{
         padding: 30px 0;
     }
 
-    .galleria-container h1{
+    .galleria-container h2{
         margin: 0;
         margin-bottom: 15px;
     }
@@ -457,6 +448,8 @@ body{
     }
 }
 
+
+/* 1200px */
 @media (max-width:1200px) {
     .hero-section{
         /* height: 720px; */
@@ -490,10 +483,7 @@ body{
 }
 
 
-
-
-
-
+/* 767px (jotta 768px leveät kannettavat toimii vielä edellisellä tavalla) */
 @media (max-width:767px) {
 
     #nav_bar{
@@ -569,6 +559,7 @@ body{
 
 }
 
+/* 480px */
 @media (max-width:480px) {
 
     #nav_bar li a{
@@ -589,17 +580,12 @@ body{
         font-size: 1.2rem;
     }
 
-    .tietoja-container h1{
-        top: 50px;
-    }
-
-    .galleria-container h1{
+    .sticky-otsikko{
         top: 50px;
     }
 
     .galleria-1-roll div{
         padding: 0 5px;
-        width: calc(var(--content-wrapper-width) / 5 / 2);
     }
 
     .galleria-2-grid div{
@@ -611,3 +597,6 @@ body{
     }
 
 }
+
+/* Löyty tämmöne työkalu, jolla vois hyvin siistiä koodia, mut en käyttäny, ku parempi näkyy kai oma jälki */
+/* https://lightningcss.dev/playground/ */
